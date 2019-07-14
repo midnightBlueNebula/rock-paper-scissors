@@ -1,0 +1,1 @@
+Simpler rock, paper, scissors game.
