@@ -1,1 +1,19 @@
-<script></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel='stylesheet' href='./style.css'>
+<div id='outcome'>
+    <img src='' id='res-img'></img>
+    <p id='message'></p>
+</div>
+<div id ='buttons'>
+    <div class='input-group mb-3'>
+        <input type='button' class='btn-default buttons' value='Rock'>
+        <input type='button' class='btn-primary buttons' value='Paper'>
+        <input type='button' class='btn-danger buttons' value='Scissors'>
+    </div>
+</div>
+<script src='./game.js'>
+</script>
+<script>
+    var button = document.querySelector('#buttons');
+    button.addEventListener('click', computerPlay);
+</script>
