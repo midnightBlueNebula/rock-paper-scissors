@@ -1,3 +1,6 @@
+var playerWin = 0;
+var cpuWin = 0;
+var drawCount = 0;
 function computerPlay(event){
     var optionsArr = ['Rock','Paper','Scissors'];
     var index = Math.floor(Math.random()*3);
@@ -30,5 +33,26 @@ function computerPlay(event){
     else if(resultText=='')  document.querySelector('#res-img').src='';
     else 
         document.querySelector('#res-img').src='https://s3.amazonaws.com/tjn-blog-images/wp-content/uploads/2015/12/19235447/what-does-your-handshake-say-about-you-810x540.jpg';
+    if(resultText.match(/won/)) ++playerWin;
+    else if(resultText.match(/lost/)) ++cpuWin;
+    else ++drawCount;
+    document.querySelector('#p-win').innerText = 'Player : ' + playerWin;
+    document.querySelector('#c-win').innerText = 'CPU : ' + cpuWin;
+    document.querySelector('#draw').innerText = 'Draw : ' + drawCount; 
+    if(playerWin==5){
+        document.querySelector('#res-img').src='';
+        document.querySelector('#message').innerText = 'YOU WON!';
+        playerWin = 0;
+        cpuWin = 0;
+        drawCount = 0;
+    }
+    else if(cpuWin==5){
+        document.querySelector('#res-img').src='';
+        document.querySelector('#message').innerText = 'YOU LOST!';
+        playerWin = 0;
+        cpuWin = 0;
+        drawCount = 0;
+    }
 }
+
 
