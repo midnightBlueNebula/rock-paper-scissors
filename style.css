@@ -38,3 +38,20 @@ body{
     left:41%;
     width: 6%;
 }
+
+#counter{
+    font-style: oblique;
+    font-size: 20px;
+}
+
+#p-win{
+    color: hotpink;
+}
+
+#c-win{
+    color: slategray;
+}
+
+#draw{
+    color: aqua;
+}
